@@ -299,7 +299,11 @@ app.delete('/api/employees/:mastCode', authMiddleware, (req, res) => {
     });
 });
 
+// --- Static HTML Page Route ---
+app.get('/', (req, res) => {
+  res.send('<h1>Aryna backend running 🚀</h1>');
+});
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on https://aryna-backend.onrender.com:${port}`);
 });
